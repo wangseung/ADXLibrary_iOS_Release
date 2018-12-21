@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.description = "ADX Library for iOS"
   s.frameworks = ["UIKit", "GLKit", "CoreMotion", "CoreGraphics", "Foundation", "AdSupport", "StoreKit", "QuartzCore", "CoreLocation", "CoreTelephony", "MobileCoreServices", "Accelerate", "AVFoundation", "WebKit", "SystemConfiguration"]
   s.libraries = ["z", "sqlite3", "xml2", "c++"]
-  s.source = { :git => 'https://adx-developer:developer2017@github.com/adxcorp/AdxLibrary_iOS_Release.git', :tag => s.version.to_s }
+  s.source = { :git => 'https://github.com/adxcorp/AdxLibrary_iOS_Release.git', :tag => s.version.to_s }
 
   s.ios.deployment_target    = '8.0'
   s.ios.vendored_framework   =  'ios/ADXLibrary.framework',
