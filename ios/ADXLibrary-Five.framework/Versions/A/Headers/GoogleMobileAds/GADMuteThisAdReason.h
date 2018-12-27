@@ -1,16 +1,3 @@
-//
-//  GADMuteThisAdReason.h
-//  Google Mobile Ads SDK
-//
-//  Copyright 2018 Google Inc. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
-GAD_SUBCLASSING_RESTRICTED
-@interface GADMuteThisAdReason : NSObject
-
-/// Text that describes the reason for muting this ad. For example "Ad Covered Content".
-@property(nonatomic, readonly, nonnull) NSString *reasonDescription;
-
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b26365b3adab759c49c24ee0cb519f201d5edef6777a3322a8230f79f57bd09
+size 383

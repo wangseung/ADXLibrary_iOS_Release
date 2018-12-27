@@ -1,36 +1,3 @@
-//
-//  GADCustomEventNativeAdDelegate.h
-//  Google Mobile Ads SDK
-//
-//  Copyright 2015 Google Inc. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
-#import <GoogleMobileAds/GADCustomEventNativeAd.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
-#import <GoogleMobileAds/Mediation/GADMediatedNativeAd.h>
-#import <GoogleMobileAds/Mediation/GADMediatedUnifiedNativeAd.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-/// The delegate of the GADCustomEventNativeAd object must adopt the GADCustomEventNativeAdDelegate
-/// protocol. Methods in this protocol are used for native ad's custom event communication with the
-/// Google Mobile Ads SDK.
-@protocol GADCustomEventNativeAdDelegate<NSObject>
-
-/// Tells the delegate that the custom event ad request succeeded and loaded a native ad.
-- (void)customEventNativeAd:(id<GADCustomEventNativeAd>)customEventNativeAd
-    didReceiveMediatedNativeAd:(id<GADMediatedNativeAd>)mediatedNativeAd;
-
-/// Tells the delegate that the custom event ad request failed.
-- (void)customEventNativeAd:(id<GADCustomEventNativeAd>)customEventNativeAd
-     didFailToLoadWithError:(NSError *)error;
-
-/// Tells the delegate that the custom event ad request succeeded and loaded a unified native ad.
-- (void)customEventNativeAd:(id<GADCustomEventNativeAd>)customEventNativeAd
-    didReceiveMediatedUnifiedNativeAd:(id<GADMediatedUnifiedNativeAd>)mediatedUnifiedNativeAd;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:d5a68e0b93d3e7a3222d2abd42927e633df66ba3fb4818ca1e6d1cbed80b0ce6
+size 1416

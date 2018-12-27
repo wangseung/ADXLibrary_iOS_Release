@@ -1,34 +1,3 @@
-//
-//  GADUnifiedNativeAd+ConfirmationClick.h
-//  Google Mobile Ads SDK
-//
-//  Copyright 2017 Google Inc. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
-#import <GoogleMobileAds/GADUnifiedNativeAd.h>
-#import <GoogleMobileAds/GADUnifiedNativeAdUnconfirmedClickDelegate.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface GADUnifiedNativeAd (ConfirmationClick)
-
-/// Unconfirmed click delegate.
-@property(nonatomic, weak, nullable)
-    id<GADUnifiedNativeAdUnconfirmedClickDelegate> unconfirmedClickDelegate;
-
-/// Registers a view that will confirm the click.
-- (void)registerClickConfirmingView:(nullable UIView *)view;
-
-/// Cancels the unconfirmed click. Called when user fails to confirm the click. When this method is
-/// called, SDK stops tracking click on the registered click confirming view and invokes the
-/// -nativeAdDidCancelUnconfirmedClick: delegate method. If there's no ongoing unconfirmed click,
-/// this method is no-op.
-- (void)cancelUnconfirmedClick;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:d697c85f868bba486facf2d5c7d3794789faa46d8043ef1dee3faa271b713b0f
+size 1073

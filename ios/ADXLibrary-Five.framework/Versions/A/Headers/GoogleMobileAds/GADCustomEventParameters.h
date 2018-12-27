@@ -1,19 +1,3 @@
-//
-//  GADCustomEventParameters.h
-//  Google Mobile Ads SDK
-//
-//  Copyright 2016 Google Inc. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-/// Key for getting the server parameter configured in AdMob when mediating to a custom event
-/// adapter.
-/// Example: NSString *serverParameter = connector.credentials[GADCustomEventParametersServer].
-GAD_EXTERN NSString *const GADCustomEventParametersServer;
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:5acfc046c3571828d2cc0942f1010eebec17287895eecf9a648e7331f8449696
+size 516

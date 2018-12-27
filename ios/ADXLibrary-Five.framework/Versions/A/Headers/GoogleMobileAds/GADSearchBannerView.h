@@ -1,28 +1,3 @@
-//
-//  GADSearchBannerView.h
-//  Google Mobile Ads SDK
-//
-//  Copyright 2011 Google Inc. All rights reserved.
-//
-
-#import <GoogleMobileAds/GADAdSizeDelegate.h>
-#import <GoogleMobileAds/GADBannerView.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-/// A view that displays search ads.
-/// To show search ads:
-///   1) Create a GADSearchBannerView and add it to your view controller's view hierarchy.
-///   2) Create a GADSearchRequest ad request object to hold the search query and other search data.
-///   3) Call GADSearchBannerView's -loadRequest: method with the GADSearchRequest object.
-GAD_SUBCLASSING_RESTRICTED
-@interface GADSearchBannerView : GADBannerView
-
-/// If the banner view is initialized with kGADAdSizeFluid and the corresponding request is created
-/// with dynamic height parameters, this delegate will be called when the ad size changes.
-@property(nonatomic, weak, nullable) IBOutlet id<GADAdSizeDelegate> adSizeDelegate;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:a43acf22f31cc723e0da357228f7ca808c2144a871ae890ce0407e1b9fbc41cb
+size 1002

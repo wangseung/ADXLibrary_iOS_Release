@@ -1,27 +1,3 @@
-//
-//  GADMediatedNativeAd.h
-//  Google Mobile Ads SDK
-//
-//  Copyright 2015 Google Inc. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
-#import <GoogleMobileAds/Mediation/GADMediatedNativeAdDelegate.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-/// Base protocol for mediated native ads.
-@protocol GADMediatedNativeAd<NSObject>
-
-/// Returns a delegate object that receives state change notifications.
-- (nullable id<GADMediatedNativeAdDelegate>)mediatedNativeAdDelegate;
-
-/// Returns a dictionary of asset names and object pairs for assets that are not handled by
-/// properties of the GADMediatedNativeAd subclass.
-- (nullable NSDictionary *)extraAssets;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ec528bbe8b943fef6d23995968e06fa2ac14a8508b3a68be7f5228b1cab63ac
+size 732

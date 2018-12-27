@@ -1,22 +1,3 @@
-//
-//  GADUnifiedNativeAd+CustomClickGesture.h
-//  Google Mobile Ads SDK
-//
-//  Copyright 2018 Google Inc. All rights reserved.
-//
-
-#import <GoogleMobileAds/GADUnifiedNativeAd.h>
-
-@interface GADUnifiedNativeAd (CustomClickGesture)
-
-/// Indicates whether the custom click gestures feature can be used.
-@property(nonatomic, readonly, getter=isCustomClickGestureEnabled) BOOL customClickGestureEnabled;
-
-/// Enables custom click gestures. Must be called before the ad is associated with an ad view.
-/// Available for whitelisted accounts only.
-- (void)enableCustomClickGestures;
-
-/// Records a click triggered by a custom click gesture.
-- (void)recordCustomClickGesture;
-
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d2a732828168db324f1f717624b37a8c8abc8fbe50fa9f029f76b948920c16c
+size 674

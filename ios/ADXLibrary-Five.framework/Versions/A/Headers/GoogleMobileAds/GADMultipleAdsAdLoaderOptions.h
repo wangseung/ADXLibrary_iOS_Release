@@ -1,28 +1,3 @@
-//
-//  GADMultipleAdsAdLoaderOptions.h
-//  Google Mobile Ads SDK
-//
-//  Copyright 2017 Google Inc. All rights reserved.
-//
-
-#import <GoogleMobileAds/GADAdLoader.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-/// Ad loader options for requesting multiple ads. Requesting multiple ads in a single request is
-/// currently only available for native app install ads and native content ads.
-GAD_SUBCLASSING_RESTRICTED
-@interface GADMultipleAdsAdLoaderOptions : GADAdLoaderOptions
-
-/// Number of ads the GADAdLoader should attempt to return for the request. By default, numberOfAds
-/// is one. Requests are invalid and will fail if numberOfAds is less than one. If numberOfAds
-/// exceeds the maximum limit (5), only the maximum number of ads are requested.
-///
-/// The ad loader makes at least one and up to numberOfAds calls to the "ad received" and
-/// -didFailToReceiveAdWithError: methods found in GADAdLoaderDelegate and its extensions, followed
-/// by a single call to -adLoaderDidFinishLoading: once loading is finished.
-@property(nonatomic) NSInteger numberOfAds;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:9500da312eb4eba31c70fc2ce6034c61486342ac9350c50aec2e80b26ad7bb13
+size 1078

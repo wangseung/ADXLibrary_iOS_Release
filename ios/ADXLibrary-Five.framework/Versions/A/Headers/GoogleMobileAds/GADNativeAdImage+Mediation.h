@@ -1,24 +1,3 @@
-//
-//  GADNativeAdImage+Mediation.h
-//  Google Mobile Ads SDK
-//
-//  Copyright 2015 Google. All rights reserved.
-//
-
-#import <GoogleMobileAds/GADNativeAdImage.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-/// Provides additional GADNativeAdImage initializers.
-@interface GADNativeAdImage (MediationAdditions)
-
-/// Initializes and returns a native ad image object with the provided image.
-- (instancetype)initWithImage:(UIImage *)image;
-
-/// Initializes and returns a native ad image object with the provided image URL and image scale.
-- (instancetype)initWithURL:(NSURL *)URL scale:(CGFloat)scale;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c6c44bcbd3fd41ad006f7c9563190742ba41e5929f5fe8fb229e3dd6b13e702
+size 661

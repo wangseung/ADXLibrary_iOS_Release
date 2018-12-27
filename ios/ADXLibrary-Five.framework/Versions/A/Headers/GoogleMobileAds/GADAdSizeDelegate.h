@@ -1,26 +1,3 @@
-//
-//  GADAdSizeDelegate.h
-//  Google Mobile Ads SDK
-//
-//  Copyright 2012 Google Inc. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
-#import <GoogleMobileAds/GADAdSize.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
-
-@class GADBannerView;
-
-NS_ASSUME_NONNULL_BEGIN
-
-/// The class implementing this protocol will be notified when the DFPBannerView changes ad size.
-/// Any views that may be affected by the banner size change will have time to adjust.
-@protocol GADAdSizeDelegate<NSObject>
-
-/// Called before the ad view changes to the new size.
-- (void)adView:(GADBannerView *)bannerView willChangeAdSizeTo:(GADAdSize)size;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:cd8d9c2d50c3d768dc6aaf7966a11fdf35d1871d5cf5c7f34ee91d830cb54639
+size 672

@@ -1,16 +1,3 @@
-//
-//  GADNativeMuteThisAdLoaderOptions.h
-//  Google Mobile Ads SDK
-//
-//  Copyright 2018 Google Inc. All rights reserved.
-//
-
-#import <GoogleMobileAds/GADAdLoader.h>
-
-GAD_SUBCLASSING_RESTRICTED
-@interface GADNativeMuteThisAdLoaderOptions : GADAdLoaderOptions
-
-/// Set to YES to request the custom Mute This Ad feature. By default, this property's value is YES.
-@property(nonatomic) BOOL customMuteThisAdRequested;
-
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6cba01b3ac0664156a8b3ed957a17b31e23f9714f55da4dadce5695b75fecdbd
+size 421

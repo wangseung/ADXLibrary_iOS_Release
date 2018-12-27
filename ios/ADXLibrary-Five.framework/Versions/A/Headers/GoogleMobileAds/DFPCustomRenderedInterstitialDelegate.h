@@ -1,29 +1,3 @@
-//
-//  DFPCustomRenderedInterstitialDelegate.h
-//  Google Mobile Ads SDK
-//
-//  Copyright 2014 Google Inc. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
-
-@class DFPCustomRenderedAd;
-@class DFPInterstitial;
-
-NS_ASSUME_NONNULL_BEGIN
-
-/// The DFPCustomRenderedAd interstitial delegate protocol for notifying the delegate of changes to
-/// custom rendered interstitials.
-@protocol DFPCustomRenderedInterstitialDelegate<NSObject>
-
-/// Called after ad data has been received. You must construct an interstitial from
-/// |customRenderedAd| and call the |customRenderedAd| object's finishedRenderingAdView: method when
-/// the ad has been rendered.
-- (void)interstitial:(DFPInterstitial *)interstitial
-    didReceiveCustomRenderedAd:(DFPCustomRenderedAd *)customRenderedAd;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:659214882409d871ab6dc87a8d0134eea6f4d4b0a7bb808e77852dc8a302c479
+size 860

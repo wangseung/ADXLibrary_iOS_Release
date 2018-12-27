@@ -1,26 +1,3 @@
-//
-//  GADAdChoicesView.h
-//  Google Mobile Ads SDK
-//
-//  Copyright 2016 Google Inc. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
-
-#import <GoogleMobileAds/GADNativeAd.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-/// Displays AdChoices content.
-///
-/// If a GADAdChoicesView is set on GADNativeAppInstallAdView or GADNativeContentAdView prior to
-/// calling -setNativeAppInstallAd: or -setNativeContentAd:, AdChoices content will render inside
-/// the GADAdChoicesView. By default, AdChoices is placed in the top right corner of
-/// GADNativeAppInstallAdView and GADNativeContentAdView.
-GAD_SUBCLASSING_RESTRICTED
-@interface GADAdChoicesView : UIView
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:8ce3ab071e1bd61388747c84665a393550319b8505322a614d7a7a94d24f1ec2
+size 720
