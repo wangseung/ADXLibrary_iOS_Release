@@ -1,27 +1,3 @@
-//
-//  MoPubCustomEventRewardedVideo.h
-//  ADXLibrary
-//
-//  Created by 최치웅 on 2019. 1. 18..
-//
-
-#if __has_include(<MoPub/MoPub.h>)
-    #import <MoPub/MoPub.h>
-#elif __has_include(<MoPubSDKFramework/MoPub.h>)
-    #import <MoPubSDKFramework/MoPub.h>
-#else
-    #import "MoPub.h"
-    #import "MPRewardedVideo.h"
-    #import "MPLogging.h"
-#endif
-
-#import <GoogleMobileAds/GoogleMobileAds.h>
-#import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface MoPubCustomEventRewardedVideo : NSObject<GADMRewardBasedVideoAdNetworkAdapter>
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:fce889921b93dee66e2c5e60457452d27852c9240ce6baf1ad9f123dd0907fd2
+size 572

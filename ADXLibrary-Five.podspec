@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "ADXLibrary-Five"
-  s.version = "1.5.7beta"
+  s.version = "1.5.8.1"
   s.summary = "ADX Library for iOS"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"Chiung Choi"=>"god@adxcorp.kr"}
@@ -19,13 +19,11 @@ Pod::Spec.new do |s|
                                 'ios/MTGSDKAppWall.framework',
                                 'ios/MTGSDKInterstitial.framework',
                                 'ios/MTGSDKReward.framework',
-                                'ios/CTSDK.framework',
+                                'ios/ApplinsSDK.framework',
                                 'ios/UnityAds.framework',
-                                'ios/DUModuleSDK.framework',
                                 'ios/IronSource.framework',
                                 'ios/ZZAdSDK.framework',
                                 'ios/ZZDWKit.framework',
-                                'ios/VungleSDK.framework',
                                 'ios/FiveAd.framework',
                                 'ios/AdPieSDK.framework'
   
