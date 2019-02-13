@@ -43,6 +43,7 @@ Pod::Spec.new do |s|
                                 'ios/IronSource.framework',
                                 'ios/ZZAdSDK.framework',
                                 'ios/ZZDWKit.framework',
+                                'ios/ZZAdVideoSDK.framework',
                                 'ios/FiveAd.framework',
                                 'ios/VungleSDK.framework',
                                 'ios/AdPieSDK.framework'
