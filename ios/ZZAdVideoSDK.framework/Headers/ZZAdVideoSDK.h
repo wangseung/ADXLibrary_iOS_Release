@@ -1,21 +1,3 @@
-//
-//  ZZAdVideoSDK.h
-//  ZZAdVideoSDK
-//
-//  Created by xuhuize on 2018/7/19.
-//  Copyright © 2018年 xuhuize. All rights reserved.
-//
-
-@import Foundation;
-@import UIKit;
-@import SystemConfiguration;
-@import CoreTelephony;
-@import AdSupport;
-@import WebKit;
-@import MobileCoreServices;
-@import CoreMedia;
-@import AVFoundation;
-@import AVKit;
-
-#import "ZZRewardVideoAd.h"
-#import "ZZRewardAdInfo.h"
+version https://git-lfs.github.com/spec/v1
+oid sha256:4ed14df7cc1d35264cdc6af6cf038eba6f8d2b50a52077931a8e8e55e23806e1
+size 400

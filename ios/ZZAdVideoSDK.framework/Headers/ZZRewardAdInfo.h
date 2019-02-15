@@ -1,30 +1,3 @@
-//
-//  ZZRewardAdInfo.h
-//  ZZAdSDK
-//
-//  Created by 至真 on 2017/10/17.
-//  Copyright © 2017年 xuhuize. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
-@interface ZZRewardAdInfo : NSObject
-
-
-/**
- 奖励的单位
- */
-@property (nonatomic, copy  ) NSString  *rewardCurrency;
-
-/**
- *  激励的名称
- */
-@property (nonatomic, copy  ) NSString  *rewardName;
-
-/**
- *  激励的数量
- */
-@property (nonatomic, assign) NSInteger rewardAmount;
-
-- (instancetype)initWithRewardCurrency:(NSString *)rewardCurrency rewardName:(NSString *)rewardName andRewardAmount:(NSInteger )rewardAmount;
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:794b829d38540fef9499e2af475676268822a5194dedb47766c6373d77ff542d
+size 604

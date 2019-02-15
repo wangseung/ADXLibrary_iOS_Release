@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "ADXLibrary"
-  s.version = "1.5.8.3"
+  s.version = "1.5.8.4"
   s.summary = "ADX Library for iOS"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"Chiung Choi"=>"god@adxcorp.kr"}
@@ -44,12 +44,15 @@ Pod::Spec.new do |s|
                                 'ios/ZZDWKit.framework',
                                 'ios/ZZAdVideoSDK.framework',
                                 'ios/VungleSDK.framework',
+                                'ios/PlayableAds.framework',
                                 'ios/AdPieSDK.framework'
   
   s.ios.vendored_libraries =   'ios/libCauly-3.1.5.a'
 
   s.libraries = ["z", "sqlite3", "xml2", "c++", "Cauly-3.1.5"]
 
+  s.resources = "assets/ZplayMuteListener.bundle"
+  
   s.dependency 'mopub-ios-sdk', '5.4.1'
   s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO', 'OTHER_LDFLAGS' => '-ObjC', 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
 end
