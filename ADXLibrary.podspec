@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "ADXLibrary"
-  s.version = "1.5.8.4"
+  s.version = "1.5.9"
   s.summary = "ADX Library for iOS"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"Chiung Choi"=>"god@adxcorp.kr"}
@@ -37,7 +37,6 @@ Pod::Spec.new do |s|
                                 'ios/MTGSDKAppWall.framework',
                                 'ios/MTGSDKInterstitial.framework',
                                 'ios/MTGSDKReward.framework',
-                                'ios/ApplinsSDK.framework',
                                 'ios/UnityAds.framework',
                                 'ios/IronSource.framework',
                                 'ios/ZZAdSDK.framework',
@@ -47,9 +46,7 @@ Pod::Spec.new do |s|
                                 'ios/PlayableAds.framework',
                                 'ios/AdPieSDK.framework'
   
-  s.ios.vendored_libraries =   'ios/libCauly-3.1.5.a'
-
-  s.libraries = ["z", "sqlite3", "xml2", "c++", "Cauly-3.1.5"]
+  s.libraries = ["z", "sqlite3", "xml2", "c++"]
 
   s.resources = "assets/ZplayMuteListener.bundle"
   
