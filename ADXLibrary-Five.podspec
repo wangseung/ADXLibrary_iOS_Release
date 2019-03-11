@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "ADXLibrary-Five"
-  s.version = "1.5.9"
+  s.version = "1.5.10"
   s.summary = "ADX Library for iOS"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"Chiung Choi"=>"god@adxcorp.kr"}
@@ -31,23 +31,19 @@ Pod::Spec.new do |s|
                     'WebKit'
 
   s.ios.vendored_framework   =  'ios/ADXLibrary.framework',
-                                'ios/ADXLibrary-Five.framework',
                                 'ios/FBAudienceNetwork.framework',
                                 'ios/GoogleMobileAds.framework',
                                 'ios/MTGSDK.framework',
-                                'ios/MTGSDKAppWall.framework',
-                                'ios/MTGSDKInterstitial.framework',
                                 'ios/MTGSDKReward.framework',
-                                'ios/ApplinsSDK.framework',
                                 'ios/UnityAds.framework',
                                 'ios/IronSource.framework',
-                                'ios/ZZAdSDK.framework',
-                                'ios/ZZDWKit.framework',
-                                'ios/ZZAdVideoSDK.framework',
-                                'ios/FiveAd.framework',
                                 'ios/VungleSDK.framework',
                                 'ios/PlayableAds.framework',
-                                'ios/AdPieSDK.framework'
+                                'ios/MATMoatMobileAppKit.framework',
+                                'ios/MobFoxSDKCore.framework',
+                                'ios/AdPieSDK.framework',
+                                'ios/ADXLibrary-Five.framework',
+                                'ios/FiveAd.framework'
   
   s.libraries = ["z", "sqlite3", "xml2", "c++"]
 
