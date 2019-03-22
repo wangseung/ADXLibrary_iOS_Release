@@ -41,6 +41,7 @@ Pod::Spec.new do |s|
                                 'ios/PlayableAds.framework',
                                 'ios/MATMoatMobileAppKit.framework',
                                 'ios/MobFoxSDKCore.framework',
+                                'ios/FiveAd.framework',
                                 'ios/AdPieSDK.framework'
   
   s.libraries = ["z", "sqlite3", "xml2", "c++"]
