@@ -1,19 +1,3 @@
-//
-//  FiveRewardedVideoCustomEvent.h
-//  ADXLibrary
-//
-//  Created by 최치웅 on 2018. 12. 17..
-//
-
-#if __has_include(<MoPub/MoPub.h>)
-    #import <MoPub/MoPub.h>
-#elif __has_include(<MoPubSDKFramework/MoPub.h>)
-    #import <MoPubSDKFramework/MoPub.h>
-#else
-    #import "MPRewardedVideoReward.h"
-    #import "MPRewardedVideoCustomEvent.h"
-#endif
-
-@interface FiveRewardedVideoCustomEvent : MPRewardedVideoCustomEvent
-
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f3f22d282f213ab0f3308b429d097eaf755f0e9185d70f4ebb5d911fbbd2d78
+size 425
