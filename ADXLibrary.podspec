@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "ADXLibrary"
-  s.version = "1.5.15"
+  s.version = "1.5.15.3"
   s.summary = "ADX Library for iOS"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"Chiung Choi"=>"god@adxcorp.kr"}
@@ -29,22 +29,18 @@ Pod::Spec.new do |s|
                     'VideoToolbox',
                     'WebKit'
 
-  s.ios.vendored_framework   =  'ios/ADXLibrary.framework',
-                                'ios/MoPubSDKFramework.framework',
-                                'ios/FBAudienceNetwork.framework',
-                                'ios/GoogleMobileAds.framework',
-                                'ios/MTGSDK.framework',
-                                'ios/MTGSDKReward.framework',
-                                'ios/UnityAds.framework',
-                                'ios/IronSource.framework',
-                                'ios/VungleSDK.framework',
-                                'ios/MATMoatMobileAppKit.framework',
-                                'ios/MobFoxSDKCore.framework',
-                                'ios/FiveAd.framework',
-                                'ios/AdPieSDK.framework'
-  
-  s.libraries = ["z", "sqlite3", "xml2", "c++"]
+  s.ios.vendored_framework   =  'ios/ADXLibrary.framework'
   
   s.dependency 'mopub-ios-sdk', '5.4.1'
+  s.dependency 'Google-Mobile-Ads-SDK', '7.37.0'
+  s.dependency 'FBAudienceNetwork', '5.2.0'
+  s.dependency 'UnityAds', '3.0.3'
+  s.dependency 'IronSourceSDK','6.8.3.0'
+  s.dependency 'VungleSDK-iOS', '6.2.0'
+  s.dependency 'AppLovinSDK', '6.5.4'
+
+  s.libraries = ["z", "sqlite3", "xml2", "c++"]
+  
   s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO', 'OTHER_LDFLAGS' => '-ObjC', 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
+  s.xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
 end
