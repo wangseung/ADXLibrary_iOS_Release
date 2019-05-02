@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name = "ADXLibrary"
+  s.name = "ADXLibrary-Vungle"
   s.version = "1.5.15.4"
   s.summary = "ADX Library for iOS"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
@@ -29,16 +29,13 @@ Pod::Spec.new do |s|
                     'VideoToolbox',
                     'WebKit'
 
-  s.ios.vendored_framework   =  'ios/ADXLibrary.framework'
+  s.ios.vendored_framework   =  'ios/ADXLibrary-Vungle.framework'
   
   s.dependency 'mopub-ios-sdk', '5.4.1'
   s.dependency 'Google-Mobile-Ads-SDK', '7.37.0'
-  s.dependency 'FBAudienceNetwork', '5.2.0'
-  s.dependency 'AppLovinSDK', '6.5.4'
-  s.dependency 'IronSourceSDK','6.8.3.0'
+  s.dependency 'VungleSDK-iOS', '6.2.0'
 
-  s.libraries = ["z", "sqlite3", "xml2", "c++"]
-  
-  s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO', 'OTHER_LDFLAGS' => '-ObjC', 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
-  s.xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
+  s.library       = 'z', 'sqlite3', 'xml2', 'c++'
+
+  s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO', 'OTHER_LDFLAGS' => '-ObjC'}
 end
