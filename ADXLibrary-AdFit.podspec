@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "ADXLibrary-AdFit"
-  s.version = "1.5.15.4"
+  s.version = "1.5.15.5"
   s.summary = "ADX Library for iOS"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"Chiung Choi"=>"god@adxcorp.kr"}
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.ios.vendored_framework   =  'ios/ADXLibrary-AdFit.framework'
   
   s.dependency 'mopub-ios-sdk', '5.4.1'
-  s.dependency 'AdFitSDK', '3.0.6'
+  s.dependency 'AdFitSDK', '3.0.7'
 
   s.library       = 'z', 'sqlite3', 'xml2', 'c++'
 
