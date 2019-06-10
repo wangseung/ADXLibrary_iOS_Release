@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cb0c0754802574006a5b1096fb5f85e155a81805d1e43b5b1daf76400576267c
-size 384
+#import <Foundation/Foundation.h>
+
+#if __has_include(<MoPub/MoPub.h>)
+#import <MoPub/MoPub.h>
+#elif __has_include(<MoPubSDKFramework/MoPub.h>)
+#import <MoPubSDKFramework/MoPub.h>
+#else
+#import "MPMediationSettingsProtocol.h"
+#import "MoPub.h"
+#endif
+
+@interface MPGoogleGlobalMediationSettings : NSObject <MPMediationSettingsProtocol>
+
+@property(nonatomic, copy) NSString *npa;
+
+@end

@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:97aa394b3b11435955b9434ea4169ac374652dcd38b908a4640274f3ac829583
-size 370
+//
+//  FacebookBannerCustomEvent.h
+//  MoPub
+//
+//  Copyright (c) 2014 MoPub. All rights reserved.
+//
+
+#if __has_include(<MoPub/MoPub.h>)
+    #import <MoPub/MoPub.h>
+#elif __has_include(<MoPubSDKFramework/MoPub.h>)
+    #import <MoPubSDKFramework/MoPub.h>
+#else
+    #import "MPBannerCustomEvent.h"
+#endif
+
+@interface FacebookBannerCustomEvent : MPBannerCustomEvent
+
+@end

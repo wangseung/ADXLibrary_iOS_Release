@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f22c0509d51d6fd14a2b91958356469e8e7adede91e88dbf7c0fbb5bbd1882cd
-size 442
+//
+//  MPGoogleAdMobInterstitialCustomEvent.h
+//  MoPub
+//
+//  Copyright (c) 2012 MoPub, Inc. All rights reserved.
+//
+
+#if __has_include(<MoPub/MoPub.h>)
+#import <MoPub/MoPub.h>
+#elif __has_include(<MoPubSDKFramework/MoPub.h>)
+#import <MoPubSDKFramework/MoPub.h>
+#else
+#import "MPInterstitialCustomEvent.h"
+#endif
+
+#import "MPGoogleGlobalMediationSettings.h"
+
+@interface MPGoogleAdMobInterstitialCustomEvent : MPInterstitialCustomEvent
+
+@end

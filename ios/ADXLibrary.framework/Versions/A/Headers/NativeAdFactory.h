@@ -1,3 +1,58 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6e8e2a1d8a1bffff6818c854c9aa787aeec2cd63862e6bf36e37b206fb5c43b5
-size 2384
+//
+//  NativeAdFactory.h
+//  Pods
+//
+//  Created by 최치웅 on 2017. 3. 17..
+//
+//
+
+#import <Foundation/Foundation.h>
+#if __has_include(<MoPub/MoPub.h>)
+    #import <MoPub/MoPub.h>
+#elif __has_include(<MoPubSDKFramework/MoPub.h>)
+    #import <MoPubSDKFramework/MoPub.h>
+#else
+    #import "MoPub.h"
+#endif
+
+@protocol NativeAdFactoryDelegate <NSObject>
+
+- (void)onSuccess:(NSString *)adUnitId nativeAd:(MPNativeAd *)nativeAd;
+- (void)onFailure:(NSString *)adUnitId;
+
+@end
+
+
+@interface NativeAdFactory : NSObject
+
+@property (nonatomic, strong) NSMutableDictionary *nativeAds;
+@property (nonatomic, strong) NSMutableDictionary *renderingViewClasses;
+@property (nonatomic, strong) NSMutableDictionary *viewSizeHandlers;
+
+@property (nonatomic, strong) NSMutableDictionary *loadings;
+@property (nonatomic, strong) NSMutableDictionary *preloadings;
+
+@property (nonatomic, strong) NSMutableSet *delegateSet;
+
++ (NativeAdFactory *)sharedInstance;
+
+- (void)addDelegate:(id<NativeAdFactoryDelegate>)delegate;
+- (void)removeDelegate:(id<NativeAdFactoryDelegate>)delegate;
+
+- (void)preloadAd:(NSString *)adUnitId;
+- (void)loadAd:(NSString *)adUnitId;
+
+- (MPTableViewAdPlacer *)getTableViewAdPlacer:(NSString *)adUnitId tableView:(UITableView *)tableView viewController:(UIViewController *)viewController viewSizeHandler:(MPNativeViewSizeHandler)viewSizeHandler;
+- (MPTableViewAdPlacer *)getTableViewAdPlacer:(NSString *)adUnitId tableView:(UITableView *)tableView viewController:(UIViewController *)viewController viewSizeHandler:(MPNativeViewSizeHandler)viewSizeHandler adPositioning:(MPAdPositioning *)adPositioning;
+
+- (MPCollectionViewAdPlacer *)getCollectionViewAdPlacer:(NSString *)adUnitId collectionView:(UICollectionView *)collectionView viewController:(UIViewController *)viewController viewSizeHandler:(MPNativeViewSizeHandler)viewSizeHandler;
+- (MPCollectionViewAdPlacer *)getCollectionViewAdPlacer:(NSString *)adUnitId collectionView:(UICollectionView *)collectionView viewController:(UIViewController *)viewController viewSizeHandler:(MPNativeViewSizeHandler)viewSizeHandler adPositioning:(MPAdPositioning *)adPositioning;
+
+- (MPNativeAd *)getNativeAd:(NSString *)adUnitId;
+
+- (void)setRenderingViewClass:(NSString *)adUnitId renderingViewClass:(Class)renderingViewClass;
+- (Class)getRenderingViewClass:(NSString *)adUnitId;
+
+- (UIView *)getNativeAdView:(NSString *)adUnitId;
+
+@end

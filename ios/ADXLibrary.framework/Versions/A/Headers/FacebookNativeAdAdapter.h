@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d7f8b14457a1a9a6e2d8f6af8715fe8e79f70c036a31ed8c4c11c8eca4fceccc
-size 608
+//
+//  FacebookNativeAdAdapter.h
+//  MoPub
+//
+//  Copyright (c) 2014 MoPub. All rights reserved.
+//
+
+#if __has_include(<MoPub/MoPub.h>)
+    #import <MoPub/MoPub.h>
+#elif __has_include(<MoPubSDKFramework/MoPub.h>)
+    #import <MoPubSDKFramework/MoPub.h>
+#else
+    #import "MPNativeAdAdapter.h"
+#endif
+
+@class FBNativeAd;
+
+extern NSString *const kFBVideoAdsEnabledKey;
+
+@interface FacebookNativeAdAdapter : NSObject <MPNativeAdAdapter>
+
+@property (nonatomic, weak) id<MPNativeAdAdapterDelegate> delegate;
+
+- (instancetype)initWithFBNativeAd:(FBNativeAd *)fbNativeAd adProperties:(NSDictionary *)adProps;
+
+@end

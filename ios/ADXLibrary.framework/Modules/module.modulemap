@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:34b11b5bd0e1060715878504fb966a5b2344c7eacb2e0f0f607e172d55331c03
-size 101
+framework module ADXLibrary {
+  umbrella header "ADXLibrary.h"
+
+  export *
+  module * { export * }
+}

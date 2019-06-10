@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:25f82eedd42b241ef34489b6e14079ff0209ece29895a3e0a62ebc8be3e55260
-size 244
+//
+//  MOPUBIronSourceExtras.h
+//  IronSourceMoPubAdapter
+//
+//  Created by Itai Asaf on 29/03/2017.
+//  Copyright © 2017 ironSource Ltd. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface IronSourceExtras : NSObject
+
+@end

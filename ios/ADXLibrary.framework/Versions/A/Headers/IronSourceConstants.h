@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:29838ada1631eb907a6c548db5617e376076ddcfdd0a49a6ad93cab19384b416
-size 491
+//
+//  IronSourceConstants.h
+//
+
+// IronSource internal reporting consts
+static NSString *const kIronSourceMediationName = @"mopub";
+static NSString *const kIronSourceMediationVersion = @"300";
+// IronSource parameters keys
+static NSString *const kIronSourceAppKey        = @"app_key";
+static NSString *const kIronSourceIsTestEnabled = @"isTestEnabled";
+static NSString *const kIronSourcePlacementName = @"placement_name";
+static NSString *const kIronSourceInstanceId    = @"instance_id";
+
+

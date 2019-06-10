@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5c220070a273e507db3c8f950a5724fd0a023c20067f1b91b9752f362ae08699
-size 394
+//
+//  FacebookInterstitialCustomEvent.h
+//  MoPub
+//
+//  Copyright (c) 2014 MoPub. All rights reserved.
+//
+
+#if __has_include(<MoPub/MoPub.h>)
+    #import <MoPub/MoPub.h>
+#elif __has_include(<MoPubSDKFramework/MoPub.h>)
+    #import <MoPubSDKFramework/MoPub.h>
+#else
+    #import "MPInterstitialCustomEvent.h"
+#endif
+
+@interface FacebookInterstitialCustomEvent : MPInterstitialCustomEvent
+
+@end
