@@ -34,7 +34,6 @@ Pod::Spec.new do |s|
   s.dependency 'mopub-ios-sdk', '5.4.1'
   s.dependency 'Google-Mobile-Ads-SDK', '7.37.0'
   s.dependency 'FBAudienceNetwork', '5.2.0'
-  s.dependency 'AppLovinSDK', '6.5.4'
   s.dependency 'IronSourceSDK','6.8.3.0'
 
   s.libraries = ["z", "sqlite3", "xml2", "c++"]
