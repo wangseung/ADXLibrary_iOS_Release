@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
                     'VideoToolbox',
                     'WebKit'
 
-  s.ios.vendored_framework   =  'ios/ADXLibrary-Vungle.framework'
+  s.ios.vendored_framework   =  'ios/ADXLibrary-AdColony.framework'
   
   s.dependency 'mopub-ios-sdk', '5.4.1'
   s.dependency 'Google-Mobile-Ads-SDK', '7.47.0'
