@@ -31,9 +31,9 @@ Pod::Spec.new do |s|
 
   s.ios.vendored_framework   =  'ios/ADXLibrary-UnityAds.framework'
   
-  s.dependency 'mopub-ios-sdk', '5.4.1'
-  s.dependency 'Google-Mobile-Ads-SDK', '7.47.0'
-  s.dependency 'UnityAds', '3.0.3'
+  s.dependency 'mopub-ios-sdk', '5.9.0'
+  s.dependency 'Google-Mobile-Ads-SDK', '7.50.0'
+  s.dependency 'UnityAds', '3.2.0'
 
   s.library       = 'z', 'sqlite3', 'xml2', 'c++'
 

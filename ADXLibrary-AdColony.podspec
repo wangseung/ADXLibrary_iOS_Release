@@ -31,9 +31,9 @@ Pod::Spec.new do |s|
 
   s.ios.vendored_framework   =  'ios/ADXLibrary-AdColony.framework'
   
-  s.dependency 'mopub-ios-sdk', '5.4.1'
-  s.dependency 'Google-Mobile-Ads-SDK', '7.47.0'
-  s.dependency 'AdColony', '3.3.8.1'
+  s.dependency 'mopub-ios-sdk', '5.9.0'
+  s.dependency 'Google-Mobile-Ads-SDK', '7.50.0'
+  s.dependency 'AdColony', '4.1.0'
 
   s.library       = 'z', 'sqlite3', 'xml2', 'c++'
 

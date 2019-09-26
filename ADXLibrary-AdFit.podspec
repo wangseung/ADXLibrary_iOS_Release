@@ -31,8 +31,8 @@ Pod::Spec.new do |s|
 
   s.ios.vendored_framework   =  'ios/ADXLibrary-AdFit.framework'
   
-  s.dependency 'mopub-ios-sdk', '5.4.1'
-  s.dependency 'AdFitSDK', '3.0.7'
+  s.dependency 'mopub-ios-sdk', '5.9.0'
+  s.dependency 'AdFitSDK', '3.0.8'
 
   s.library       = 'z', 'sqlite3', 'xml2', 'c++'
 

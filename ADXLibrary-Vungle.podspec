@@ -31,9 +31,9 @@ Pod::Spec.new do |s|
 
   s.ios.vendored_framework   =  'ios/ADXLibrary-Vungle.framework'
   
-  s.dependency 'mopub-ios-sdk', '5.4.1'
-  s.dependency 'Google-Mobile-Ads-SDK', '7.47.0'
-  s.dependency 'VungleSDK-iOS', '6.2.0'
+  s.dependency 'mopub-ios-sdk', '5.9.0'
+  s.dependency 'Google-Mobile-Ads-SDK', '7.50.0'
+  s.dependency 'VungleSDK-iOS', '6.4.3'
 
   s.library       = 'z', 'sqlite3', 'xml2', 'c++'
 
