@@ -10,14 +10,9 @@
     #import "MPRewardedVideoReward.h"
     #import "MPRewardedVideoCustomEvent.h"
 #endif
-
-#import "IronSourceRewardedVideoDelegate.h"
 #import <IronSource/IronSource.h>
-#import "IronSourceManager.h"
-#import "IronSourceUtils.h"
 
-
-@interface IronSourceRewardedVideoCustomEvent : MPRewardedVideoCustomEvent
+@interface IronSourceRewardedVideoCustomEvent : MPRewardedVideoCustomEvent <ISDemandOnlyRewardedVideoDelegate>
 
 
 @end
