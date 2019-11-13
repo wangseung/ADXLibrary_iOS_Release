@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "ADXLibrary-AdColony"
-  s.version = "1.5.21"
+  s.version = "1.6.2"
   s.summary = "ADX Library for iOS"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"Chiung Choi"=>"god@adxcorp.kr"}
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.ios.vendored_framework   =  'ios/ADXLibrary-AdColony.framework'
   
-  s.dependency 'mopub-ios-sdk', '5.4.1'
+  s.dependency 'mopub-ios-sdk', '5.9.0'
   s.dependency 'Google-Mobile-Ads-SDK', '7.50.0'
   s.dependency 'AdColony', '4.1.1'
 
