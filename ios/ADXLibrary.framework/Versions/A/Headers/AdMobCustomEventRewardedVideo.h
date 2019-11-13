@@ -8,6 +8,6 @@
 #import <GoogleMobileAds/GoogleMobileAds.h>
 #import <Foundation/Foundation.h>
 
-@interface AdMobCustomEventRewardedVideo : NSObject<GADMRewardBasedVideoAdNetworkAdapter>
+@interface AdMobCustomEventRewardedVideo : NSObject<GADMediationAdapter>
 
 @end
