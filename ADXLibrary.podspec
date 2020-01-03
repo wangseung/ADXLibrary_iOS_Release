@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "ADXLibrary"
-  s.version = "1.6.4"
+  s.version = "1.6.5"
   s.summary = "ADX Library for iOS"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"Chiung Choi"=>"god@adxcorp.kr"}
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
                                 'ios/FBAudienceNetwork.framework'
   
   s.dependency 'mopub-ios-sdk', '5.9.0'
-  s.dependency 'Google-Mobile-Ads-SDK', '7.50.0'
+  s.dependency 'Google-Mobile-Ads-SDK', '7.51.0'
   s.dependency 'IronSourceSDK','6.8.7.0'
   s.dependency 'AdPieSDK','1.2.6'
 
