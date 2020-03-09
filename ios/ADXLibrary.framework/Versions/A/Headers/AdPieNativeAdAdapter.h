@@ -14,17 +14,19 @@
 #else
 #import "MPNativeAdAdapter.h"
 #import "MPAdImpressionTimer.h"
+#import "MPAdDestinationDisplayAgent.h"
 #endif
 
 @class APNativeAd;
 
-@interface AdPieNativeAdAdapter : NSObject <MPNativeAdAdapter, MPAdImpressionTimerDelegate>
+@interface AdPieNativeAdAdapter : NSObject <MPNativeAdAdapter, MPAdImpressionTimerDelegate, MPAdDestinationDisplayAgentDelegate>
 
 @property(nonatomic, weak) id<MPNativeAdAdapterDelegate> delegate;
 
 @property (nonatomic, strong) APNativeAd * nativeAd;
 @property (nonatomic, strong) NSDictionary * properties;
 @property (nonatomic, strong) MPAdImpressionTimer *impressionTimer;
+@property (nonatomic, strong) MPAdDestinationDisplayAgent *destinationDisplayAgent;
 
 - (instancetype)initWithNativeAd:(APNativeAd *)nativeAd;
 
