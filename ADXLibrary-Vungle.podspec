@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "ADXLibrary-Vungle"
-  s.version = "1.6.9"
+  s.version = "1.6.10"
   s.summary = "ADX Library for iOS"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"Chiung Choi"=>"god@adxcorp.kr"}
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   
   s.dependency 'mopub-ios-sdk', '5.9.0'
   s.dependency 'Google-Mobile-Ads-SDK', '7.57.0'
-  s.dependency 'VungleSDK-iOS', '6.5.2'
+  s.dependency 'VungleSDK-iOS', '6.5.3'
 
   s.library       = 'z', 'sqlite3', 'xml2', 'c++'
 
