@@ -35,7 +35,6 @@ Pod::Spec.new do |s|
   s.dependency 'Google-Mobile-Ads-SDK', '7.57.0'
   s.dependency 'IronSourceSDK','6.8.7.0'
   s.dependency 'AdPieSDK','1.2.6'
-  s.dependency 'FBAudienceNetwork','5.9.0'
 
   s.libraries = ["z", "sqlite3", "xml2", "c++"]
   
