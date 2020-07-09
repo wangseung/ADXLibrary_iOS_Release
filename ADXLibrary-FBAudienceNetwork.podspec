@@ -41,20 +41,29 @@ Pod::Spec.new do |s|
   ### Begin: Subspecs
   
   s.subspec 'Default' do |ds|
+  
   	ds.dependency 'FBAudienceNetwork','5.9.0'
+  	
   end
   
   s.subspec 'Lib' do |ls|
+  
   	ls.dependency 'ADXLibrary-FBAudienceNetwork/Lib-FBAudienceNetwork'
   	ls.dependency 'ADXLibrary-FBAudienceNetwork/Lib-FBSDKCoreKit'
+  	
   end
   
   s.subspec 'Lib-FBAudienceNetwork' do |fas|
-	fas.ios.vendored_framework =	'ios/FBAudienceNetwork.framework'
+  
+	fas.ios.vendored_framework =	'ios/FBAudienceNetwork.framework',
+									'ios/FBSDKCoreKit.framework'
+	
   end
   
   s.subspec 'Lib-FBSDKCoreKit' do |fss|
+  
   	fss.ios.vendored_framework =	'ios/FBSDKCoreKit.framework'
+  	
   end
   
   ### End: Subspecs
