@@ -55,8 +55,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'Lib-FBAudienceNetwork' do |fas|
   
-	fas.ios.vendored_framework =	'ios/FBAudienceNetwork.framework',
-									'ios/FBSDKCoreKit.framework'
+	fas.ios.vendored_framework =	'ios/FBAudienceNetwork.framework'
 	
   end
   
