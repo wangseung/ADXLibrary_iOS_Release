@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name = "ADXLibrary-FBAudienceNetwork"
-  s.version = "1.7.3"
+  s.version = "1.8.0"
   s.summary = "ADX Library for iOS"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"Chiung Choi"=>"god@adxcorp.kr"}
   s.homepage = "https://github.com/adxcorp/AdxLibrary_iOS"
   s.description = "ADX Library for iOS"
-  s.source = { :git => 'https://adx-developer:developer2017@github.com/adxcorp/AdxLibrary_iOS_Release.git', :tag => s.version.to_s }
-  s.ios.deployment_target    = '9.0'
+  s.source = { :git => 'https://github.com/adxcorp/AdxLibrary_iOS_Release.git', :tag => s.version.to_s }
+  s.ios.deployment_target    = '10.0'
 
   s.frameworks =    'Accelerate',
                     'AdSupport',
@@ -31,8 +31,7 @@ Pod::Spec.new do |s|
 
   s.ios.vendored_framework   =  'ios/ADXLibrary-FBAudienceNetwork.framework'
   
-  s.dependency 'mopub-ios-sdk/Core', '5.9.0'
-  s.dependency 'Google-Mobile-Ads-SDK', '7.57.0'
+  s.dependency 'ADXLibrary-Core', '1.0.2'
 
   s.libraries = ["z", "sqlite3", "xml2", "c++"]
   
@@ -42,7 +41,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'Default' do |ds|
   
-  	ds.dependency 'FBAudienceNetwork','5.9.0'
+  	ds.dependency 'FBAudienceNetwork','5.10.1'
   	
   end
   
