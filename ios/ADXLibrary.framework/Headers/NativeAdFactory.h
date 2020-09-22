@@ -6,6 +6,9 @@
 //
 //
 
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 @class MPNativeAd;
 @class MPTableViewAdPlacer;
 @class MPCollectionViewAdPlacer;
