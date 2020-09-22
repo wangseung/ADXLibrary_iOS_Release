@@ -9,36 +9,34 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ADXLogUtil : NSObject
+#define ADX_PLATFORM_ADCOLONY @"AdColony"
+#define ADX_PLATFORM_ADFIT @"AdFit"
+#define ADX_PLATFORM_ADPIE @"AdPie"
+#define ADX_PLATFORM_CAULY @"Cauly"
+#define ADX_PLATFORM_FACEBOOK @"FAN"
+#define ADX_PLATFORM_ADMOB @"AdMob"
+#define ADX_PLATFORM_IRONSOURCE @"ironSource"
+#define ADX_PLATFORM_MOPUB @"MoPub"
+#define ADX_PLATFORM_UNITYADS @"UnityAds"
+#define ADX_PLATFORM_VUNGLE @"Vungle"
 
-extern NSString *const kADXPlatformAdColony;
-extern NSString *const kADXPlatformAdFit;
-extern NSString *const kADXPlatformAdPie;
-extern NSString *const kADXPlatformCauly;
-extern NSString *const kADXPlatformFacebook;
-extern NSString *const kADXPlatformAdMob;
-extern NSString *const kADXPlatformIronSource;
-extern NSString *const kADXPlatformMoPub;
-extern NSString *const kADXPlatformUnityAds;
-extern NSString *const kADXPlatformVungle;
+#define ADX_INVENTORY_BANNER @"Banner"
+#define ADX_INVENTORY_INTERSTITIAL @"Interstitial"
+#define ADX_INVENTORY_NATIVE @"Native"
+#define ADX_INVENTORY_RV @"RewardedVideo"
 
-extern NSString *const kADXInventroyBanner;
-extern NSString *const kADXInventroyInterstitial;
-extern NSString *const kADXInventroyNative;
-extern NSString *const kADXInventroyRewardedVideo;
+#define ADX_EVENT_LOAD @"Load"
+#define ADX_EVENT_LOAD_SUCCESS @"Success"
+#define ADX_EVENT_LOAD_FAILURE @"Failure"
+#define ADX_EVENT_IMPRESSION @"Impression"
+#define ADX_EVENT_CLICK @"Click"
+#define ADX_EVENT_REWARD @"Reward"
+#define ADX_EVENT_CLOSED @"Closed"
 
-extern NSString *const kADXEventLoad;
-extern NSString *const kADXEventLoadSuccess;
-extern NSString *const kADXEventLoadFailure;
-extern NSString *const kADXEventImpression;
-extern NSString *const kADXEventClick;
-extern NSString *const kADXEventReward;
-extern NSString *const kADXEventClosed;
-
-extern void ADXLogEvent(NSString *platform,
-                        NSString *inventory,
-                        NSString *event);
-
-@end
+#ifdef DEBUG
+#define ADXLogEvent(platform, inventory, event) NSLog(@"AD(X)[%@|%@]: %@", platform, inventory, event)
+#else
+#define ADXLogEvent(platform, inventory, event) ((void)0)
+#endif
 
 NS_ASSUME_NONNULL_END
