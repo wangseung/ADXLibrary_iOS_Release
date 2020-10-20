@@ -1,5 +1,5 @@
 framework module FBSDKCoreKit {
-    umbrella header "FBSDKBasicUtility.h"
+    umbrella header "FBSDKCoreKit.h"
 
     export *
     module * { export * }

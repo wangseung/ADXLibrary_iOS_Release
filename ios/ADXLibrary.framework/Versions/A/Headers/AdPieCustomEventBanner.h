@@ -1,5 +1,5 @@
 //
-//  AdPieBannerCustomEvent.h
+//  AdPieCustomEventBanner.h
 //  ADXLibrary
 //
 //  Created by sunny on 2020/08/11.

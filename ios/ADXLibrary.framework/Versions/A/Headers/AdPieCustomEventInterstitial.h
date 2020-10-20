@@ -1,5 +1,5 @@
 //
-//  AdPieInterstitialCustomEvent.h
+//  AdPieCustomEventInterstitial.h
 //  ADXLibrary
 //
 //  Created by sunny on 2020/08/11.
