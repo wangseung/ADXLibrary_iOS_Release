@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "ADXLibrary-Vungle"
-  s.version = "1.8.1"
+  s.version = "1.8.2"
   s.summary = "ADX Library for iOS"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"Chiung Choi"=>"god@adxcorp.kr"}
@@ -31,11 +31,12 @@ Pod::Spec.new do |s|
 
   s.ios.vendored_framework   =  'ios/ADXLibrary-Vungle.framework'
   
-  s.dependency 'mopub-ios-sdk', '5.13.1'
+  s.dependency 'mopub-ios-sdk', '5.14.1'
   s.dependency 'Google-Mobile-Ads-SDK', '7.64.0'
-  s.dependency 'VungleSDK-iOS', '6.7.1'
+  s.dependency 'VungleSDK-iOS', '6.8.0'
 
   s.library       = 'z', 'sqlite3', 'xml2', 'c++'
 
-  s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO', 'OTHER_LDFLAGS' => '-ObjC'}
+  s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO', 'OTHER_LDFLAGS' => '-ObjC', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
