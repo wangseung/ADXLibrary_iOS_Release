@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "ADXLibrary"
-  s.version = "1.8.3"
+  s.version = "1.8.4"
   s.summary = "ADX Library for iOS"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"Chiung Choi"=>"god@adxcorp.kr"}
@@ -8,6 +8,9 @@ Pod::Spec.new do |s|
   s.description = "ADX Library for iOS"
   s.source = { :git => 'https://github.com/adxcorp/AdxLibrary_iOS_Release.git', :tag => s.version.to_s }
   s.ios.deployment_target    = '10.0'
+  
+  s.source_files = 'MediationAdapter/ADXLibrary/Classes/**/*'
+  s.resources = ["MediationAdapter/ADXLibrary/Assets/*"]
 
   s.frameworks =    'Accelerate',
                     'AdSupport',
@@ -31,9 +34,9 @@ Pod::Spec.new do |s|
 
   s.ios.vendored_framework   =  'ios/ADXLibrary.framework'
   
-  s.dependency 'mopub-ios-sdk', '5.14.1'
-  s.dependency 'Google-Mobile-Ads-SDK', '7.66.0'
-  s.dependency 'IronSourceSDK','7.0.2.0'
+  s.dependency 'mopub-ios-sdk', '5.15.0'
+  s.dependency 'Google-Mobile-Ads-SDK', '7.68.0'
+  s.dependency 'IronSourceSDK','7.0.4.0'
   s.dependency 'AdPieSDK','1.2.8'
 
   s.libraries = ["z", "sqlite3", "xml2", "c++"]
