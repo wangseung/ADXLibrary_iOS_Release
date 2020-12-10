@@ -31,8 +31,6 @@ Pod::Spec.new do |s|
                     'UIKit',
                     'VideoToolbox',
                     'WebKit'
-
-  s.ios.vendored_framework   =  'ios/ADXLibrary.framework'
   
   s.dependency 'mopub-ios-sdk', '5.15.0'
   s.dependency 'Google-Mobile-Ads-SDK', '7.68.0'
