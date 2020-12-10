@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target    = '10.0'
   
   s.source_files = 'MediationAdapter/ADXLibrary-FBAudienceNetwork/Classes/**/*'
-  s.resources = ["MediationAdapter/ADXLibrary-FBAudienceNetwork/Assets/*"]
+  #s.resources = ["MediationAdapter/ADXLibrary-FBAudienceNetwork/Assets/*"]
 
   s.frameworks =    'Accelerate',
                     'AdSupport',

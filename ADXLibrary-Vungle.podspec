@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target    = '10.0'
   
   s.source_files = 'MediationAdapter/ADXLibrary-Vungle/Classes/**/*'
-  s.resources = ["MediationAdapter/ADXLibrary-Vungle/Assets/*"]
+  #s.resources = ["MediationAdapter/ADXLibrary-Vungle/Assets/*"]
 
   s.frameworks =    'Accelerate',
                     'AdSupport',
