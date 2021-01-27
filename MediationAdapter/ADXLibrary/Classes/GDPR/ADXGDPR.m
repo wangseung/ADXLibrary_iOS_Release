@@ -16,6 +16,7 @@
 #endif
 
 #import <AdSupport/AdSupport.h>
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
 
 #define URL_LOC         @"http://adservice.google.com/getconfig/pubvendors"
 #define URL_IN_EEA      @"?debug_geo=1"
@@ -42,15 +43,33 @@ static UIWindow *currentWindow = nil;
         
         NSLog(@"#ADX: ADXLibrary iOS ver - %@", ADX_SDK_VERSION);
         
-        ASIdentifierManager *adIdentManager = [ASIdentifierManager sharedManager];
-        if (adIdentManager.advertisingTrackingEnabled == FALSE) {
-            [sharedInstance setConsentState:ADXConsentStateDenied];
-        } else {
-            ADXConsentState consentState = [sharedInstance getConsentState];
-            if (consentState == ADXConsentStateNotRequired || consentState == ADXConsentStateConfirm) {
-                [[MoPub sharedInstance] grantConsent];
+        if (@available(iOS 14.0, *)) {
+            // iOS 14 이상 광고추적제한 로직
+            NSLog(@"#ADX: ADXLibrary trackingAuthorizationStatus - %lu", (unsigned long)ATTrackingManager.trackingAuthorizationStatus);
+            
+            if (ATTrackingManager.trackingAuthorizationStatus == ATTrackingManagerAuthorizationStatusAuthorized || (ATTrackingManager.trackingAuthorizationStatus == ATTrackingManagerAuthorizationStatusNotDetermined)) {
+                
+                ADXConsentState consentState = [sharedInstance getConsentState];
+                if (consentState == ADXConsentStateNotRequired || consentState == ADXConsentStateConfirm) {
+                    [[MoPub sharedInstance] grantConsent];
+                } else {
+                    [[MoPub sharedInstance] revokeConsent];
+                }
             } else {
-                [[MoPub sharedInstance] revokeConsent];
+                [sharedInstance setConsentState:ADXConsentStateDenied];
+            }
+        } else {
+            // iOS 13 이하 광고추적제한 로직
+            ASIdentifierManager *adIdentManager = [ASIdentifierManager sharedManager];
+            if (adIdentManager.advertisingTrackingEnabled == FALSE) {
+                [sharedInstance setConsentState:ADXConsentStateDenied];
+            } else {
+                ADXConsentState consentState = [sharedInstance getConsentState];
+                if (consentState == ADXConsentStateNotRequired || consentState == ADXConsentStateConfirm) {
+                    [[MoPub sharedInstance] grantConsent];
+                } else {
+                    [[MoPub sharedInstance] revokeConsent];
+                }
             }
         }
         
@@ -262,11 +281,28 @@ static UIWindow *currentWindow = nil;
 
 - (void)setConsentState:(ADXConsentState)state {
     
-    ASIdentifierManager *adIdentManager = [ASIdentifierManager sharedManager];
-    if (state == ADXConsentStateDenied && adIdentManager.advertisingTrackingEnabled == FALSE) {
-        [[MoPub sharedInstance] revokeConsent];
+    if (@available(iOS 14.0, *)) {
+        // iOS 14 이상 광고추적제한 로직
+        NSLog(@"##ADX: ADXLibrary trackingAuthorizationStatus - %lu", (unsigned long)ATTrackingManager.trackingAuthorizationStatus);
+        
+        if (ATTrackingManager.trackingAuthorizationStatus == ATTrackingManagerAuthorizationStatusAuthorized || (ATTrackingManager.trackingAuthorizationStatus == ATTrackingManagerAuthorizationStatusNotDetermined)) {
+            
+            if (state == ADXConsentStateDenied) {
+                [[MoPub sharedInstance] revokeConsent];
+            } else {
+                [[MoPub sharedInstance] grantConsent];
+            }
+        } else {
+            [[MoPub sharedInstance] revokeConsent];
+        }
     } else {
-        [[MoPub sharedInstance] grantConsent];
+        // iOS 13 이하 광고추적제한 로직
+        ASIdentifierManager *adIdentManager = [ASIdentifierManager sharedManager];
+        if (state == ADXConsentStateDenied && adIdentManager.advertisingTrackingEnabled == FALSE) {
+            [[MoPub sharedInstance] revokeConsent];
+        } else {
+            [[MoPub sharedInstance] grantConsent];
+        }
     }
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

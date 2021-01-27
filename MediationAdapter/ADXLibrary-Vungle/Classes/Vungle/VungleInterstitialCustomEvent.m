@@ -14,6 +14,8 @@
 #import "VungleInterstitialCustomEvent.h"
 #import "VungleRouter.h"
 
+#import "ADXLogUtil.h"
+
 // If you need to play ads with vungle options, you may modify playVungleAdFromRootViewController and create an options dictionary and call the playAd:withOptions: method on the vungle SDK.
 
 @interface VungleInterstitialCustomEvent () <VungleRouterDelegate>
@@ -46,6 +48,8 @@
 
 - (void)requestAdWithAdapterInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup
 {
+    ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_INTERSTITIAL, ADX_EVENT_LOAD);
+    
     self.placementId = [info objectForKey:kVunglePlacementIdKey];
     
     // Cache the initialization parameters
@@ -135,6 +139,8 @@
 
 - (void)vungleAdDidLoad
 {
+    ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_INTERSTITIAL, ADX_EVENT_LOAD_SUCCESS);
+    
     if (self.isAdLoaded) {
         return;
     }
@@ -153,6 +159,8 @@
 
 - (void)vungleAdDidAppear
 {
+    ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_INTERSTITIAL, ADX_EVENT_IMPRESSION);
+    
     MPLogAdEvent([MPLogEvent adShowSuccessForAdapter:NSStringFromClass(self.class)], [self getPlacementID]);
     MPLogAdEvent([MPLogEvent adDidAppearForAdapter:NSStringFromClass(self.class)], [self getPlacementID]);
     [self.delegate fullscreenAdAdapterAdDidAppear:self];
@@ -167,6 +175,8 @@
 
 - (void)vungleAdDidDisappear
 {
+    ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_INTERSTITIAL, ADX_EVENT_CLOSED);
+    
     MPLogAdEvent([MPLogEvent adDidDisappearForAdapter:NSStringFromClass(self.class)], [self getPlacementID]);
     [self.delegate fullscreenAdAdapterAdDidDisappear:self];
     
@@ -182,6 +192,8 @@
 
 - (void)vungleAdTrackClick
 {
+    ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_INTERSTITIAL, ADX_EVENT_CLICK);
+    
     MPLogAdEvent([MPLogEvent adTappedForAdapter:NSStringFromClass(self.class)], [self getPlacementID]);
     [self.delegate fullscreenAdAdapterDidTrackClick:self];
     [self.delegate fullscreenAdAdapterDidReceiveTap:self];
@@ -198,6 +210,9 @@
     if (self.isAdLoaded) {
         return;
     }
+    
+    NSString *errorMsg = [NSString stringWithFormat:@"%@, %@", ADX_EVENT_LOAD_FAILURE, error.description];
+    ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_INTERSTITIAL, errorMsg);
     
     MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:error], [self getPlacementID]);
     [self.delegate fullscreenAdAdapter:self didFailToLoadAdWithError:error];

@@ -18,6 +18,8 @@
 #import "GADMAdapterVungleRouter.h"
 #import "GADMAdapterVungleUtils.h"
 
+#import "ADXLogUtil.h"
+
 @interface GADMAdapterVungleInterstitial () <GADMAdapterVungleDelegate>
 @end
 
@@ -51,6 +53,8 @@
 #pragma mark - GAD Ad Network Protocol Banner Methods (MREC)
 
 - (void)getBannerWithSize:(GADAdSize)adSize {
+  ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_BANNER, ADX_EVENT_LOAD);
+    
   id<GADMAdNetworkConnector> strongConnector = _connector;
   _bannerAd = [[GADMAdapterVungleBanner alloc] initWithGADMAdNetworkConnector:strongConnector
                                                                       adapter:self];
@@ -60,6 +64,8 @@
 #pragma mark - GAD Ad Network Protocol Interstitial Methods
 
 - (void)getInterstitial {
+  ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_INTERSTITIAL, ADX_EVENT_LOAD);
+    
   id<GADMAdNetworkConnector> strongConnector = _connector;
   self.desiredPlacement = [GADMAdapterVungleUtils findPlacement:[strongConnector credentials]
                                                   networkExtras:[strongConnector networkExtras]];
@@ -132,8 +138,13 @@
   NSError *error = [[GADMAdapterVungleRouter sharedInstance] loadAd:self.desiredPlacement
                                                        withDelegate:self];
   if (error) {
+    NSString *errorMsg = [NSString stringWithFormat:@"%@, %@", ADX_EVENT_LOAD_FAILURE, error.description];
+    ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_INTERSTITIAL, errorMsg);
+      
     [_connector adapter:self didFailAd:error];
   }
+    
+  ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_INTERSTITIAL, ADX_EVENT_LOAD_SUCCESS);
 }
 
 #pragma mark - VungleRouter delegates
@@ -176,10 +187,14 @@
 }
 
 - (void)didCloseAd {
+  ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_INTERSTITIAL, ADX_EVENT_CLOSED);
+    
   [_connector adapterDidDismissInterstitial:self];
 }
 
 - (void)trackClick {
+  ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_INTERSTITIAL, ADX_EVENT_CLICK);
+    
   [_connector adapterDidGetAdClick:self];
 }
 

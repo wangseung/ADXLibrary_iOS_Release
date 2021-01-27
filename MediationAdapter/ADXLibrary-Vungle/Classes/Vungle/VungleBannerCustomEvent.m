@@ -13,6 +13,8 @@
 #endif
 #import "VungleRouter.h"
 
+#import "ADXLogUtil.h"
+
 @interface VungleBannerCustomEvent () <VungleRouterDelegate>
 
 @property (nonatomic, copy) NSString *placementId;
@@ -38,6 +40,8 @@
 
 - (void)requestAdWithSize:(CGSize)size adapterInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup
 {
+    ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_BANNER, ADX_EVENT_LOAD);
+    
     self.placementId = [info objectForKey:kVunglePlacementIdKey];
     self.options = nil;
     
@@ -98,6 +102,8 @@
 
 - (void)vungleAdDidLoad
 {
+    ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_BANNER, ADX_EVENT_LOAD_SUCCESS);
+    
     if (self.isAdLoaded) {
         // Already invoked an ad load callback.
         return;
@@ -161,6 +167,8 @@
 
 - (void)vungleAdTrackClick
 {
+    ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_BANNER, ADX_EVENT_CLICK);
+    
     MPLogInfo(@"Vungle video banner was tapped");
     [self.delegate inlineAdAdapterWillBeginUserAction:self];
     MPLogAdEvent([MPLogEvent adTappedForAdapter:NSStringFromClass(self.class)], self.getPlacementID);
@@ -174,6 +182,9 @@
         // Already invoked an ad load callback.
         return;
     }
+    
+    NSString *errorMsg = [NSString stringWithFormat:@"%@, %@", ADX_EVENT_LOAD_FAILURE, error.description];
+    ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_BANNER, errorMsg);
     
     MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:error], [self getPlacementID]);
     NSError *loadFailError = nil;

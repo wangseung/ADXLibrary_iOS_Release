@@ -16,6 +16,8 @@
 #import "GADMAdapterVungleRouter.h"
 #import "GADMAdapterVungleUtils.h"
 
+#import "ADXLogUtil.h"
+
 @interface GADMAdapterVungleBanner () <GADMAdapterVungleDelegate>
 @end
 
@@ -126,8 +128,13 @@
   NSError *error = [[GADMAdapterVungleRouter sharedInstance] loadAd:self.desiredPlacement
                                                        withDelegate:self];
   if (error) {
+    NSString *errorMsg = [NSString stringWithFormat:@"%@, %@", ADX_EVENT_LOAD_FAILURE, error.description];
+    ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_BANNER, errorMsg);
+      
     [_connector adapter:_adapter didFailAd:error];
   }
+    
+  ADXLogEvent(ADX_PLATFORM_VUNGLE, ADX_INVENTORY_BANNER, ADX_EVENT_LOAD_SUCCESS);
 }
 
 - (void)cleanUp {

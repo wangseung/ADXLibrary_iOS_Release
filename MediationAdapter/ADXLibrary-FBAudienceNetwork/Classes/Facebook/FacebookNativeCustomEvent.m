@@ -119,6 +119,8 @@ static const NSInteger FacebookNoFillErrorCode = 1001;
 
 - (void)nativeBannerAdDidLoad:(FBNativeBannerAd *)nativeBannerAd
 {
+    ADXLogEvent(ADX_PLATFORM_FACEBOOK, ADX_INVENTORY_NATIVE, ADX_EVENT_LOAD_SUCCESS);
+    
     FacebookNativeAdAdapter *adAdapter = [[FacebookNativeAdAdapter alloc] initWithFBNativeAdBase:nativeBannerAd adProperties:nil];
     MPNativeAd *interfaceAd = [[MPNativeAd alloc] initWithAdAdapter:adAdapter];
     
@@ -128,6 +130,9 @@ static const NSInteger FacebookNoFillErrorCode = 1001;
 
 - (void)nativeBannerAd:(FBNativeBannerAd *)nativeBannerAd didFailWithError:(NSError *)error
 {
+    NSString *errorMsg = [NSString stringWithFormat:@"%@, %@", ADX_EVENT_LOAD_FAILURE, error.description];
+    ADXLogEvent(ADX_PLATFORM_FACEBOOK, ADX_INVENTORY_NATIVE, errorMsg);
+    
     if (error.code == FacebookNoFillErrorCode) {
         MPLogAdEvent([MPLogEvent adShowFailedForAdapter:NSStringFromClass(self.class) error:MPNativeAdNSErrorForNoInventory()], self.fbPlacementId);
         [self.delegate nativeCustomEvent:self didFailToLoadAdWithError:MPNativeAdNSErrorForNoInventory()];

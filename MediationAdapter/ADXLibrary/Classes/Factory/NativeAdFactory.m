@@ -121,7 +121,7 @@
     
     MPNativeAdRendererConfiguration *config = [MPStaticNativeAdRenderer rendererConfigurationWithRendererSettings:settings];
     config.supportedCustomEvents = @[@"MPMoPubNativeCustomEvent", @"FacebookNativeCustomEvent", @"FacebookNativeBannerCustomEvent",
-                                     @"MobvistaNativeCustomEvent", @"MobFoxMoPubNativeCustomEvent", @"AdPieNativeCustomEvent"];
+                                     @"MobvistaNativeCustomEvent", @"MobFoxMoPubNativeCustomEvent", @"AdPieNativeCustomEvent", @"PangleNativeCustomEvent"];
     
     MPNativeAdRendererConfiguration *googleConfiguration = [MPGoogleAdMobNativeRenderer rendererConfigurationWithRendererSettings:settings];
     
@@ -175,7 +175,7 @@
     
     MPNativeAdRendererConfiguration *config = [MPStaticNativeAdRenderer rendererConfigurationWithRendererSettings:settings];
     config.supportedCustomEvents = @[@"MPMoPubNativeCustomEvent", @"FacebookNativeCustomEvent", @"FacebookNativeBannerCustomEvent",
-                                     @"MobvistaNativeCustomEvent", @"MobFoxMoPubNativeCustomEvent", @"AdPieNativeCustomEvent"];
+                                     @"MobvistaNativeCustomEvent", @"MobFoxMoPubNativeCustomEvent", @"AdPieNativeCustomEvent", @"PangleNativeCustomEvent"];
     
     MPNativeAdRendererConfiguration *googleConfiguration = [MPGoogleAdMobNativeRenderer rendererConfigurationWithRendererSettings:settings];
     
@@ -198,7 +198,7 @@
     
     MPNativeAdRendererConfiguration *config = [MPStaticNativeAdRenderer rendererConfigurationWithRendererSettings:settings];
     config.supportedCustomEvents = @[@"MPMoPubNativeCustomEvent", @"FacebookNativeCustomEvent", @"FacebookNativeBannerCustomEvent",
-                                     @"MobvistaNativeCustomEvent", @"MobFoxMoPubNativeCustomEvent", @"AdPieNativeCustomEvent"];
+                                     @"MobvistaNativeCustomEvent", @"MobFoxMoPubNativeCustomEvent", @"AdPieNativeCustomEvent", @"PangleNativeCustomEvent"];
     
     MPNativeAdRendererConfiguration *googleConfiguration = [MPGoogleAdMobNativeRenderer rendererConfigurationWithRendererSettings:settings];
     

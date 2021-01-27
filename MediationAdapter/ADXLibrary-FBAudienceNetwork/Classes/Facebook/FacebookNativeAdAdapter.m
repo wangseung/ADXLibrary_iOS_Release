@@ -184,6 +184,8 @@
 
 - (void)nativeBannerAdWillLogImpression:(FBNativeBannerAd *)nativeBannerAd
 {
+    ADXLogEvent(ADX_PLATFORM_FACEBOOK, ADX_INVENTORY_NATIVE, ADX_EVENT_IMPRESSION);
+    
     if ([self.delegate respondsToSelector:@selector(nativeAdWillLogImpression:)]) {
         MPLogAdEvent([MPLogEvent adShowSuccessForAdapter:NSStringFromClass(self.class)], self.fbNativeAdBase.placementID);
         MPLogAdEvent([MPLogEvent adWillAppearForAdapter:NSStringFromClass(self.class)], self.fbNativeAdBase.placementID);
@@ -196,6 +198,8 @@
 
 - (void)nativeBannerAdDidClick:(FBNativeBannerAd *)nativeBannerAd
 {
+    ADXLogEvent(ADX_PLATFORM_FACEBOOK, ADX_INVENTORY_NATIVE, ADX_EVENT_CLICK);
+    
     if ([self.delegate respondsToSelector:@selector(nativeAdDidClick:)]) {
         MPLogAdEvent([MPLogEvent adTappedForAdapter:NSStringFromClass(self.class)], self.fbNativeAdBase.placementID);
 

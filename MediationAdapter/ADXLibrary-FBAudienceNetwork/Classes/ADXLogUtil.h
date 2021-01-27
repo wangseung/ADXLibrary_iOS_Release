@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define ADX_PLATFORM_ADMOB @"AdMob"
 #define ADX_PLATFORM_IRONSOURCE @"ironSource"
 #define ADX_PLATFORM_MOPUB @"MoPub"
+#define ADX_PLATFORM_PANGLE @"Pangle"
 #define ADX_PLATFORM_UNITYADS @"UnityAds"
 #define ADX_PLATFORM_VUNGLE @"Vungle"
 
