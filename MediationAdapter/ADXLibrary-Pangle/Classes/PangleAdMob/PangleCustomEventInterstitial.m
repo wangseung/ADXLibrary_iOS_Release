@@ -7,7 +7,6 @@
 
 #import "PangleCustomEventInterstitial.h"
 
-#import <ADXLibrary/ADXGDPR.h>
 #import "ADXLogUtil.h"
 
 @interface PangleCustomEventInterstitial () <BUFullscreenVideoAdDelegate>
@@ -46,12 +45,6 @@
     NSDictionary *info = [PangleCustomEventInterstitial dictionaryWithJsonString:serverParameter];
     NSString *appId = [info objectForKey:@"app_id"];
     NSString *adPlacementId = [info objectForKey:@"ad_placement_id"];
-    
-    if ([ADXGDPR.sharedInstance getConsentState] == ADXConsentStateDenied) {
-        [BUAdSDKManager setGDPR:1];
-    } else {
-        [BUAdSDKManager setGDPR:0];
-    }
     
     [BUAdSDKManager setAppID:appId];
     

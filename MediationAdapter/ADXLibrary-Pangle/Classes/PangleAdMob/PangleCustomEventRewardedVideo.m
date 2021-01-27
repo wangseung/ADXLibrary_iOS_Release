@@ -7,7 +7,6 @@
 
 #import "PangleCustomEventRewardedVideo.h"
 
-#import <ADXLibrary/ADXGDPR.h>
 #import "ADXLogUtil.h"
 
 @interface PangleCustomEventRewardedVideo() <BURewardedVideoAdDelegate> {
@@ -94,12 +93,6 @@ completionHandler:(GADMediationAdapterSetUpCompletionBlock)completionHandler {
     
     [BUAdSDKManager setLoglevel:BUAdSDKLogLevelDebug];
     
-    if ([ADXGDPR.sharedInstance getConsentState] == ADXConsentStateDenied) {
-        [BUAdSDKManager setGDPR:1];
-    } else {
-        [BUAdSDKManager setGDPR:0];
-    }
-    
     [BUAdSDKManager setAppID:appId];
     
     completionHandler(nil);
@@ -116,12 +109,6 @@ completionHandler:(GADMediationAdapterSetUpCompletionBlock)completionHandler {
     
     self.appId = appId;
     self.adPlacementId = adPlacementId;
-    
-    if ([ADXGDPR.sharedInstance getConsentState] == ADXConsentStateDenied) {
-        [BUAdSDKManager setGDPR:1];
-    } else {
-        [BUAdSDKManager setGDPR:0];
-    }
     
     [BUAdSDKManager setAppID:appId];
     
