@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   s.dependency 'AdColony', '4.4.1'
 
   s.library       = 'z', 'sqlite3', 'xml2', 'c++'
-
+  s.static_framework = true
   s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO', 'OTHER_LDFLAGS' => '-ObjC', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end

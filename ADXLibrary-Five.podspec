@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
                                 'ios/FiveAd.framework'
   
   s.libraries = ["z", "sqlite3", "xml2", "c++"]
-
+  s.static_framework = true
   s.resources = "assets/ZplayMuteListener.bundle"
   
   s.dependency 'mopub-ios-sdk', '5.4.1'

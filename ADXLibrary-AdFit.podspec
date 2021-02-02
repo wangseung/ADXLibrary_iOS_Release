@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   s.dependency 'AdFitSDK', '3.0.10'
 
   s.library       = 'z', 'sqlite3', 'xml2', 'c++'
-
+  s.static_framework = true
   s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO', 'OTHER_LDFLAGS' => '-ObjC'}
   s.xcconfig = { 'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'YES' }
 end

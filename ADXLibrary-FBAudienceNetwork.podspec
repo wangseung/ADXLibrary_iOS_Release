@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.dependency 'Google-Mobile-Ads-SDK', '7.69.0'
 
   s.libraries = ["z", "sqlite3", "xml2", "c++"]
-  
+  s.static_framework = true
   s.default_subspec = 'Default'
   
   ### Begin: Subspecs

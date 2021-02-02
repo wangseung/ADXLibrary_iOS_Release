@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   
   s.dependency 'mopub-ios-sdk', '5.15.0'
   s.dependency 'Google-Mobile-Ads-SDK', '7.69.0'
-
+  s.static_framework = true
   s.ios.vendored_libraries = 'MediationAdapter/ADXLibrary-Cauly/Lib/libCauly-universal.a'
 
   s.library       = 'z', 'sqlite3', 'xml2', 'c++'

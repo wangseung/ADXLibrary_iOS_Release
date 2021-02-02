@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   s.dependency 'mopub-ios-sdk', '5.15.0'
   s.dependency 'Google-Mobile-Ads-SDK', '7.69.0'
   s.dependency 'Bytedance-UnionAD', '3.3.6.2'
-
+  s.static_framework = true
   s.library       = 'z', 'sqlite3', 'xml2', 'c++'
 
   s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO', 'OTHER_LDFLAGS' => '-ObjC', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
