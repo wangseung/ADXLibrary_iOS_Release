@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.authors = {"Chiung Choi"=>"god@adxcorp.kr"}
   s.homepage = "https://github.com/adxcorp/AdxLibrary_iOS"
   s.description = "ADX Library for iOS"
-  s.source = { :git => 'https://adx-developer:developer2017@github.com/adxcorp/AdxLibrary_iOS_Release.git', :tag => s.version.to_s }
+  s.source = { :git => 'https://github.com/wangseung/ADXLibrary_iOS_Release.git', :tag => s.version.to_s }
   s.ios.deployment_target    = '9.0'
 
   s.frameworks =    'Accelerate',
